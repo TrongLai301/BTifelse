@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại Học Tra Cứu</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr><th  colspan="2" style="text-align:left; font-size:large;" >Tính Điểm ĐH Khối D</th></tr>
+            <tr>
+                <td>Môn Toán</td>
+                <td><input type="text" placeholder="Enter Math point" id="M" /> </td>
+            </tr>
+            <tr>
+               <td>Môn văn</td>
+                <td><input type="text" placeholder="Enter Literary point" id="L" /> </td>
+            </tr>
+            <tr>
+                 <td>Môn anh</td>
+                <td><input type="text" placeholder="Enter English point" id="E" /> </td>
+            </tr>
+            <tr>
+                <td>Khu Vực</td>
+                <td>
+                    <select id="KV">
+                        <option >KV1</option>
+                        <option >KV2</option>
+                        <option >KV2-NT</option>
+                        <option >KV3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td> <button type="button" onclick="Point();" >Tính Điểm</button></td> </tr>
+        </table>
+          <p id="Result"></p>
+    </form>
+    <script>
+        function Point(){
+        let M= Number(document.getElementById("M").value);
+        let L= Number(document.getElementById("L").value);
+        let E= Number(document.getElementById("E").value);
+        let D= document.getElementById("KV").value;
+        
+        let P= M+L+E;
+        switch (D){
+            case "KV1":
+                Result= ("Tổng điểm ĐH khối D của bạn là: "+(P+0.75))
+                break;
+            case "KV2":
+                Result= ("Tổng điểm ĐH khối D của bạn là: "+(P+0.5))
+                break;
+            case "KV2-NT":
+                Result= ("Tổng điểm ĐH khối D của bạn là: "+(P+0.25))
+                break;
+                default:
+                    Result=("Tổng điểm ĐH khối D của bạn là: "+P)
+        }
+        document.getElementById("Result").innerHTML=Result
+        }
+    </script>
+
+    <style>
+       table{
+        padding:10px;
+       }
+       #M,#L,#E{
+        width:120px;
+    }
+    </style>
+    
+</body>
+</html>

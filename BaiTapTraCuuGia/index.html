@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giá Hoa Quả</title>
+</head>
+<body>
+    <form>
+    <h1>Giá Hoa Quả</h1>
+    <input type="text" id="F" placeholder="Enter The Fruits"/>
+    <button type="button" onclick="S();">Xem Giá</button>
+    <p id="Number"></p>
+    </form>
+    <script>
+        function S(){
+            let F= document.getElementById("F").value;
+            switch (F){
+                case "Ổi":
+                    Number= ("20000 VNĐ/Kg")
+                    break;
+            
+                case "Dưa Hấu":
+                    Number= ("20000 VNĐ/Kg")
+                    break;
+            
+                case "Táo":
+                    Number= ("30000 VNĐ/Kg")
+                    break;
+            
+                case "Xoài":
+                    Number= ("30000 VNĐ/Kg")
+                    break;
+            
+                case "Cam":
+                    Number= ("40000 VNĐ/Kg")
+                    break;
+            
+                case "Chôm Chôm":
+                    Number= ("40000 VNĐ/Kg")
+                    break;
+            
+              case "Măng Cụt":
+                    Number= ("50000 VNĐ/Kg")
+                    break;
+            }
+            document.getElementById("Number").innerHTML=Number
+        }
+    </script>
+    
+    
+</body>
+</html>

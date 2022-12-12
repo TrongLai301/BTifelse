@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let CN= Number(prompt("Nhập Cân Nặng"));
+       let CC= Number(prompt("Nhập Chiều Cao"));
+       let BMI = CN/(CC*CC);
+       if (BMI<16)
+        alert("ĐỘ Gầy III");
+       if (BMI>=16 && BMI<17)
+        alert("ĐỘ Gầy II");
+       if (BMI>=17 && BMI <18.5)
+        alert("ĐỘ Gầy I");
+       if (BMI>=18.5 && BMI <25)
+        alert("Trung Bình");
+       if (BMI>=25 && BMI <30)
+        alert("Thừa Cân");
+       if (BMI>=30 && BMI <35)
+        alert("Béo Phì Độ I");
+       if (BMI>=35 && BMI <40)
+        alert("Béo Phì II");
+       if (BMI>40)
+        alert("Béo Phì III");
+
+    
+        
+    </script>
+</body>
+</html>
